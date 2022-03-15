@@ -10,7 +10,7 @@ for (i = 0; i < 10; i++)
 {
 for (j = 0; j < 10;  j++)
 {
-_product = i * j;
+product = i * j;
 if (j == 0)
 {
 _putchar('0' + product);
@@ -18,7 +18,7 @@ _putchar('0' + product);
 else if (product >= 10)
 {
 _putchar(' ');
-_putchar('0' + (product / 10))
+_putchar('0' + (product / 10));
 _putchar('0' + (product % 10));
 }
 else
