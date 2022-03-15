@@ -1,23 +1,25 @@
 #include <stdio.h>
 /**
 *main - print sum of even-valued terms.
-*@x: input.
-*@y: input.
 *Retutrn: 0 always.
 */
 int main(void)
 {
-long int i, x = 1, y = 2, sum = 0, tsum = 0;
-for (i = 0; i < 49; i++)
+unsigned long int lim = 4000000;
+unsigned long int bef = 0;
+unsigned long int aft = 1;
+unsigned long int R = 0;
+unsigned long int sum = 0;
+while (lim > R)
 {
-if ((y % 2 == 0) && (y <= 4000000))
+R = bef + aft;
+if ((R % 2) == 0)
 {
-tsum = tsum + y;
+sum += R;
 }
-sum = x + y;
-x = y;
-y = sum;
+bef = aft;
+aft = R;
 }
-printf("%id\n", tsum);
+printf("%li\n", sum);
 return (0);
 }
