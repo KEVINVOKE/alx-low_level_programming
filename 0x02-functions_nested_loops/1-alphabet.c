@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-*main - prints alphabet in lowercase followed by new line.
+*Description - prints_alphabet in lowercase followed by new line.
 *
 *Return: 0
 */
-void print_alphabet(void);
+void print_alphabet(void)
 {
 char c;
 for (c = 'a'; c <= 'z'; c++)
