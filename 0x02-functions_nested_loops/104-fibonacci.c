@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
 *main - prints fibonacci numbers
-*Return: 0
+*Return: Always (0) success
 */
 int main(void)
 {
-int num, num2, i, n;
+int num1, num2, i, n;
 int next_num;
 n = 98;
 for (i = 1; i <= n; i++)
@@ -17,8 +17,8 @@ printf("%d, ", num2);
 else
 {
 printf("%d, ", num2);
-next_num = num2 + num2;
-num2 = num2;
+next_num = num1 + num2;
+num1 = num2;
 num2 = next_num;
 }
 }
