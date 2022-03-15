@@ -6,46 +6,41 @@
 */
 void print_times_table(int n)
 {
-int i, j, k, product;
-j = n + 1;
-for (i = 0; i < j; i++)
+int a = 0, rep, b;
+if (n < 0 || n > 15)
+return;
+while (a <= n)
 {
-for (k = 0; k < j; k++)
+for (b = 0; b <= n; b++)
 {
-if (n > 15)
+rep = a * b;
+if (b == 0)
+_putchar('0' + rep);
+else if (rep < 10)
 {
-break;
+_putchar(' ');
+_putchar(' ');
+_putchar('0' + rep);
+}
+else if (rep < 100)
+{
+_putchar(' ');
+_putchar('0' + rep / 10);
+_putchar('0' + rep % 10);
 }
 else
 {
-product = i * k;
-if (k == 0)
-{
-_putchar('0' + product);
+_putchar('o' + rep / 100);
+_putchar('0' + (rep - 100) / 10);
+_putchar('0' + rep % 10);
 }
-else if (product >= 10)
-{
-_putchar(' ');
-_putchar('0' + (product / 10));
-_putchar('0' + (product % 10));
-}
-else if (product >= 100)
-{
-_putchar('o' + (product / 100));
-_putchar('0' + ((product / 10) % 10));
-_putchar('0' + (product % 10));
-}
-else
-{
-_putchar(' ');
-_putchar(' ');
-_putchar(product + '0');
-}
-if (k != n)
+if (b < n)
 {
 _putchar(',');
+_putchar(' ');
 }
 }
-}
+_putchar('\n');
+a++;
 }
 }
