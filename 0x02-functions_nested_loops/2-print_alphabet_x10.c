@@ -1,17 +1,22 @@
 #include "main.h"
 /**
-*print_alphabet_x10 - printing alphabet 10 times
+*print_alphabet_x10 - print alpha x10
+*Return: no return value.
 */
 void print_alphabet_x10(void)
 {
-int i;
-char c;
-for (i - 0; i < 10; i++)
+char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
+int i, j;
+i = 0;
+while (i < 10)
 {
-for (c - 'a'; c <= 'z'; c++)
+j = 0;
+while (j < 26)
 {
-_putchar(c);
+_putchar(alphabet[j]);
+j++;
 }
 _putchar('\n');
+i++;
 }
 }
