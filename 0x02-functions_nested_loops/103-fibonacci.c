@@ -1,25 +1,25 @@
 #include <stdio.h>
 /**
-*main- get the sum of even finobacci numbers up to 4 million.
-*Retutrn: 0 always.
+*main - prints the sum of the even-valued terms followed by a new line
+*Return: Always 0 (Success)
 */
 int main(void)
 {
-unsigned long int lim = 4000000;
-unsigned long int bef = 0;
-unsigned long int aft = 1;
-unsigned long int R = 0;
-unsigned long int sum = 0;
-while (lim > R)
+int i;
+unsigned long int j, k, next, sum;
+j = 1;
+k = 2;
+sum = 0;
+for (i = 1; i <= 33; ++i)
 {
-R = bef + aft;
-if ((R % 2) == 0)
+if (j < 4000000 && (j % 2) == 0)
 {
-sum += R;
+sum = sum + j;
 }
-bef = aft;
-aft = R;
+next = j + k;
+j = k;
+k = next;
 }
-printf("%li\n", sum);
+printf("%lu\n", sum);
 return (0);
 }
