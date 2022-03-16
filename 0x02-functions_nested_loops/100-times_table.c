@@ -36,10 +36,10 @@ else
 _putchar(' ');
 _putchar((k / 100) + '0');
 _putchar(((k % 100) / 10) + '0');
-_putchar(((k % 100) % 100) + '0');
+_putchar(((k % 100) % 10) + '0');
 }
 if (j < n)
-_putchar(' ');
+_putchar(',');
 }
 _putchar('\n');
 }
