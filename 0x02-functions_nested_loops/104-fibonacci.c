@@ -5,23 +5,16 @@
 */
 int main(void)
 {
-int num1, num2, i, n;
-int next_num;
-n = 98;
-for (i = 1; i <= n; i++)
+unsigned long f = 0, f1 = 1, res;
+int count;
+for (count = 0; count < 98; count++)
 {
-if (i == 98)
-{
-printf("%d, ", num2);
+res = f + f1;
+f = f1, f1 = res;
+printf("%lu", res);
+if (count != 97)
+putchar(44), putchar (32);
 }
-else
-{
-printf("%d, ", num2);
-next_num = num1 + num2;
-num1 = num2;
-num2 = next_num;
-}
-}
-printf("\n");
+putchar(10);
 return (0);
 }
