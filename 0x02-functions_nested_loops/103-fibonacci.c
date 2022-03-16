@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-*main - print sum of even-valued terms.
+*main- get the sum of even finobacci numbers up to 4 million.
 *Retutrn: 0 always.
 */
 int main(void)
