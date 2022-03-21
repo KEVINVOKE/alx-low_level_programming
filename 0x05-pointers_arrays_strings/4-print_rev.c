@@ -1,12 +1,22 @@
 #include "main.h"
 /**
-* main - check the code
-* Return: Always 0.
+* print_rev - prints string
+* @s: input string
+* Return: no return
 */
-int main(void)
+void print_rev(char *s)
 {
-char *str;
-str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-print_rev(str);
-return (0);
+int count = 0;
+while (*s != '\0')
+{
+s++;
+count++;
+}
+while (count > 0)
+{
+s--;
+_putchar(*s);
+count--;
+}
+_putchar('\n');
 }
