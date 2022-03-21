@@ -2,7 +2,6 @@
 /**
 * _strlen - returns lenght of string
 * @s: input parameter
-*
 * Description: uses pointers
 * Return: Alawy (0)
 */
