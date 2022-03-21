@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
 * swap_int - swap integers
 * @a: first parameter
