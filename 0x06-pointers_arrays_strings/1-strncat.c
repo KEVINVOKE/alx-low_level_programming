@@ -25,3 +25,4 @@ dest[m + i] = src[i];
 }
 dest[m + i] = '\0';
 return (dest);
+}
