@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 
-/**#include "holberton.h"
+/**#include "main.h"
 
 /**
  * print_chessboard - prints chessboard.
