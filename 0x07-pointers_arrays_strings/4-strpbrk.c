@@ -1,40 +1,45 @@
 #include "main.h"
 #include <stdio.h>
-/**#include "main.h"
+
 /**
-* print_chessboard - prints chessboard.
-* @a: matrix
-*/
-void print_chessboard(char (*a)[8])
-{
-int i, j;
-for (i = 0; i < 8; i++)
-{
-for (j = 0; j < 8; j++)
-{
-_putchar(*(*(i + a) + j));
-}
-_putchar('\n');
-}
-}
-*_strpbrk - bytes
-*@s: pointer to char
-*@accept: pointer to char
-*Return: NULL
-*/
+ * _strpbrk - search a string
+ * @s: input string
+ * @accept: accepted string
+ *
+ * Description: searches a string for any of a set of bytes
+ * Return: resturns accepted string
+ */
+
 char *_strpbrk(char *s, char *accept)
 {
-int i;
-while (*s)
-{
-for (i = 0; accept[i]; i++)
-{
-if (*s == accept[i])
-{
-return (s);
-}
-}
-s++;
-}
-return (NULL);
+	int i, j, len, exist = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		continue;
+	}
+	len = i;
+	for (i = 0; accept[i] != '\0'; i++)
+	{
+		for (j = 0; s[j] != '\0'; j++)
+		{
+			if (accept[i] == s[j])
+			{
+				if (j <= len)
+				{
+					len = j;
+					exist = 1;
+				}
+			}
+		}
+	}
+	if (exist == 1)
+	{
+		return (&s[len]);
+	}
+	else
+	{
+		return (NULL);
+	}
+	return (0);
 }
