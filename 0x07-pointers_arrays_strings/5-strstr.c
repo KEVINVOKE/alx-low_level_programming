@@ -1,12 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 /**
 *_strstr-function locate
 *@haystack: pointer to char
 *@needle: pointer to char
 *Return: 0
 */
-char *_strstr(char *haystack, char *needle)
 char *_strstr(char *haystack, char *needle)
 {
 	char *result = haystack, *fneedle = needle;
