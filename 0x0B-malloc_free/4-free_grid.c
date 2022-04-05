@@ -1,23 +1,23 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * free_grid - frees a 2 dimensional grid
- * @grid: the address of the two dimensional grid
- * @height: height of the grid
+ * free_grid - Free a 2 dimensional grid previously created by your
+ * alloc_grid function
  *
- * Description: print_chessboard
- * Return: Nothing.
+ * @grid: The grid we'll free up
+ * @height: The number of rows in the grid
+ *
+ * Return: Nothing
  */
 
 void free_grid(int **grid, int height)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i < height; i++)
+	while (i < height)
 	{
 		free(grid[i]);
+		i++;
 	}
 	free(grid);
 }
