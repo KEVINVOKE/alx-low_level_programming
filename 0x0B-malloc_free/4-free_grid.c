@@ -1,22 +1,23 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-#include <studio.h>
 
 /**
- * free_grid - alloc_grid
- * @grid: pointer to 2D arrays
- * @height: array
- * Return: void
+ * free_grid - frees a 2 dimensional grid
+ * @grid: the address of the two dimensional grid
+ * @height: height of the grid
+ *
+ * Description: print_chessboard
+ * Return: Nothing.
  */
 
 void free_grid(int **grid, int height)
 {
-	height--;
+	int i;
 
-	while (height >= 0)
+	for (i = 0; i < height; i++)
 	{
-		free(*(grid + height));
-		height--;
+		free(grid[i]);
 	}
 	free(grid);
 }
