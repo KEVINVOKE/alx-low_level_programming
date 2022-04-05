@@ -1,46 +1,46 @@
-#include "stdlib.h"
+#include <stdlib.h>
 
 /**
- * argstostr - concatenates arguments
+ *argstostr - concatenates all arguements of a program
  *
- * @ac: number of arguments
- * @av: array of arguments
- * Return: returns a string address
+ *@ac:arguement count
+ *@av:arguement vector
+ *
+ *Return:pointer to a new string
  */
-
 char *argstostr(int ac, char **av)
 {
-char *str;
-int i = 0, n = 0, c = 0, j = 0, count = 0;
+	int i = 0, j = 0, z = 0, length = 0;
 
-while (i < ac)
-{
-for (j = 0; av[i][j]; j++)
-{
-count++;
-}
-i++;
-}
+	char *p;
 
-str = malloc((sizeof(char) * count)+1024);
-
-
-if (ac == 0 || av == NULL)
-{
-return (NULL);
-}
-
-while (n < ac)
-{
-for (i = 0; av[n][i] != '\0'; i++)
-{
-str[c] = av[n][i];
-c++;
-}
-str[c] = '\n';
-n++;
-c++;
-}
-
-return (str);
+	if (ac == 0 || av == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j]; j++)
+		{
+			length++;
+		}
+		length += 1;
+	}
+	p = malloc((sizeof(char) * length) + 1);
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j]; j++)
+		{
+			p[z] = av[i][j];
+			z++;
+		}
+		p[z] = '\n';
+		z++;
+	}
+	p[z] = '\0';
+	return (p);
 }
