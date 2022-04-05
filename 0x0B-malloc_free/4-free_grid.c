@@ -1,4 +1,6 @@
+#include "main.h"
 #include <stdlib.h>
+#include <studio.h>
 
 /**
  * free_grid - alloc_grid
