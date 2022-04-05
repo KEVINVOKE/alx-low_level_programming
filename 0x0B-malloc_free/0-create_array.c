@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "main.h"
 #include <stdlib.h> 
 =======
+=======
+>>>>>>> 8657fca78602de11eb524c9fb9bb9db3ad4320f1
 #include <stdlib.h>
 >>>>>>> 8657fca78602de11eb524c9fb9bb9db3ad4320f1
 #include <stdio.h>
