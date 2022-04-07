@@ -86,7 +86,7 @@ for (i = 0; i < len - 1; i++)
 if (result[i])
 a = 1;
 if (a)
-_putchar(result[i] + '0');
+putchar(result[i] + '0');
 }
 if (!a)
 putchar('0');
