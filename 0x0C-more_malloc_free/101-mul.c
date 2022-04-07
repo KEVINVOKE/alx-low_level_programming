@@ -173,7 +173,6 @@ void nums_add(char *final_prod, char *next_prod, int next_len)
 }
 /**
  *main - multiplies two positive numbers and prints the result
- *
  *@argc:arguement count
  *@argv:arguement vector
  *Return:(0- success)
