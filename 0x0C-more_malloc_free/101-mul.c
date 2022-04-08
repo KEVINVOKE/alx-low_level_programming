@@ -44,7 +44,7 @@ exit (98);
 *@argv: array of arguments
 *Return: always 0 (success)
 */
-int main (int argc char *argv[])
+int main (int argc, char *argv[])
 {
 char *s1, *s2
 Int len1, len2, len, I, carry digit1, digit2, *result a=0;
