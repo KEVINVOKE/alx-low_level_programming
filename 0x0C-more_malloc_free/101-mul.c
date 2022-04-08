@@ -15,7 +15,7 @@ void print_str(char *str)
 		putchar(str[i]);
 		i++;
 	}
-	_putchar('\n');
+	putchar('\n');
 }
 
 
