@@ -19,7 +19,7 @@ void nums_add(char *final_prod, char *next_prod, int next_len);
 int _strlen(char *s)
 {
 int i;
-for (i = 0; s[i] != '\0'; i++);		
+for (i = 0; s[i] != '\0'; i++);
 return (i);
 }
 /**
