@@ -12,9 +12,9 @@ while (s[i])
 {
 if (s[i] < '0' || s[i] > '9')
 return (0);
-i++
+i++;
 }
-Return (1);
+return (1);
 }
 /**
 *_strlen - returns the length of a string
@@ -26,7 +26,7 @@ int _strlen (char *s)
 int i=0;
 while (s[i] != '0\')
 {
-i++
+i++ ;
 }
 return (i);
 }
