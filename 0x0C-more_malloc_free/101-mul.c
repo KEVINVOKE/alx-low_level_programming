@@ -10,11 +10,8 @@ void nums_add(char *final_prod, char *next_prod, int next_len);
 
 /**
  *_strlen - length of string
- *
  *@s:string
- *
  *Return:string length
- *
  */
 int _strlen(char *s)
 {
